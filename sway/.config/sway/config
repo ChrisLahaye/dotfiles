@@ -242,7 +242,9 @@ bar {
     }
 }
 
-### Autostart
+#
+# Autostart:
+#
 exec /usr/lib/xfce-polkit/xfce-polkit
 exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob
 
