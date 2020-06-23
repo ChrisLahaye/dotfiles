@@ -99,7 +99,7 @@ input "1102:4620:ALP0011:00_044E:120C" {
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
     # Screenshot
-    bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+    bindsym $mod+p exec grim -g "$(slurp)" - | swappy -f -
 
     # Audio
     bindsym XF86AudioRaiseVolume exec pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob
