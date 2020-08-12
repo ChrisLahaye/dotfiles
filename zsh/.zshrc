@@ -14,7 +14,6 @@ alias glog=$'git log --pretty=format:\'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d 
 alias gls=$'git ls-files | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
 alias glsi=$'git ls-files --others --exclude-standard | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
 alias ls='ls --color=auto'
-alias ssh='kitty +kitten ssh'
 
 diff () { colordiff -W$COLUMNS -y ${@:1:-2} <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-2]}) <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-1]}) }
 
