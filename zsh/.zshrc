@@ -18,7 +18,7 @@ alias ssh='kitty +kitten ssh'
 
 diff () { colordiff -W$COLUMNS -y ${@:1:-2} <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-2]}) <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-1]}) }
 
-export PATH="$PATH:/home/chris/.yarn/bin"
+export PATH="$PATH:/home/chris/.bin:/home/chris/.yarn/bin"
 
 # https://github.com/lukechilds/zsh-nvm
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
