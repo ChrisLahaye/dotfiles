@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = pacman-mirrorlist
+
+[Action]
+Description = updating pacman-mirrorlist with reflector
+When = PostTransaction
+Depends = reflector
+Exec = /bin/sh -c "reflector --country 'Netherlands' --latest 200 --age 24 --sort rate --save /etc/pacman.d/mirrorlist; rm -f /etc/pacman.d/mirrorlist.pacnew"
