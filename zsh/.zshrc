@@ -2,7 +2,7 @@
 # ~/.zshrc
 #
 
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 setopt appendhistory
@@ -17,10 +17,10 @@ alias ls='ls --color=auto'
 
 diff () { colordiff -W$COLUMNS -y ${@:1:-2} <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-2]}) <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-1]}) }
 
-export PATH="$PATH:/home/chris/.bin:/home/chris/.yarn/bin"
+export PATH="$PATH:$HOME/.bin:$HOME/.yarn/bin"
 
 # https://github.com/lukechilds/zsh-nvm
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
+source $HOME/.zsh-nvm/zsh-nvm.plugin.zsh
 
 # https://wiki.archlinux.org/index.php/Zsh#Key_bindings
 typeset -g -A key
