@@ -5,10 +5,10 @@
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
-setopt appendhistory
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
 
-alias dmesg='dmesg --color=always'
-alias less='less -R'
 alias gfiddle='git fiddle --no-fiddle --fiddle-subject'
 alias glog=$'git log --pretty=format:\'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s\' --date=short'
 alias gls=$'git ls-files | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
