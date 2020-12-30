@@ -15,8 +15,6 @@ alias gls=$'git ls-files | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=
 alias glsi=$'git ls-files --others --exclude-standard | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
 alias ls='ls --color=auto'
 
-diff () { colordiff -W$COLUMNS -y ${@:1:-2} <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-2]}) <(fold -w $(($COLUMNS / 2 - 10)) -s ${@[-1]}) }
-
 export PATH="$PATH:$HOME/.bin:$HOME/.yarn/bin"
 
 # https://github.com/lukechilds/zsh-nvm
